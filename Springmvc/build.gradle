@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+archivesBaseName = 'GradleTest'
+version = '1.0-SNAPSHOT' 
+repositories {
+    mavenCentral()
+}
+jar {
+	manifest {
+		attributes 'Main-Class': 'com.test.Test'
+	}
+}
+dependencies {
+   compile  'org.apache.commons:commons-lang3:3.0'
+   compile  'log4j:log4j:1.2.16'
+   compile  'junit:junit:3.8.1'
+}
